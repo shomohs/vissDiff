@@ -15,6 +15,18 @@ class locator(object):
 		self.request_logger = logger(1)
 
 	def get(self, res):
+		"""
+		Use the GET verb on a URI resource
+		
+		Args:
+			res : The  resource on which the action is performed
+
+		Returns:
+			The result of the action on the resource
+
+		Raises:
+			Exception in case the status code of the response is not 200
+		"""
 		self.request_logger.info(self.request_formatter("GET", res))
 		try:
 			resp = requests.get(res)
