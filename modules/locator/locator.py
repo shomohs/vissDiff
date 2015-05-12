@@ -6,13 +6,13 @@ Author: Abhinav CHADHA
 Module: URI locators
 """
 
-from modules.logger.logger import logger
+from modules.logger.Logger import Logger
 import requests
 
-class locator(object):
+class Locator(object):
 	def __init__(self):
 		self.request_formatter = lambda verb, res: "{0} on {1}".format(verb, res)
-		self.request_logger = logger(1)
+		self.request_logger = Logger(1)
 
 	def get(self, res):
 		"""
@@ -31,6 +31,8 @@ class locator(object):
 		try:
 			resp = requests.get(res)
 		except requests.exceptions.MissingSchema:
+			self.request_logger.debug("Missing Schema, adding http to the uri")
 			resp = requests.get("http://" + res)
+		request_logger.debug("Checking for response status code")
 		assert resp.status_code == 200, "Error while processing request."
 		return resp

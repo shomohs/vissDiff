@@ -10,7 +10,7 @@ import logging
 
 FORMAT = "%(asctime)s %(process)s %(thread)s: %(message)s"
 
-class logger(object):
+class Logger(object):
 	def __init__(self, level=1, format=FORMAT):
 		levels = {
 		0: logging.DEBUG,
