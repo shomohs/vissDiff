@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Visual Diff</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="scripts/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/style.css"></link>
+	</head>
+	<body>
+		<table id="vissDiffTable">
+		    <tr class="url-input">
+		        <th id="url-entry-1">
+		            <input id="url-1" type="url" placeholder="URL#1"></input>
+		            <input id="submit-1" class="btn submit" type="submit" value="Submit & Preview"></input>
+		        </th>
+		        <th id="url-entry-2">
+		            <input id="url-2" type="url" placeholder="URL#2"></input>
+		            <input id="submit-2" class="btn submit" type="submit" value="Submit & Preview"></input>
+		        </th>
+		    </tr>
+		    <tr class="webpage-display">
+		        <td id="webpage-1">
+		            <div id="container-1">
+		                <iframe id="iframe-1" src=""></iframe>
+		            </div>
+		        </td>
+		        <td id="webpage-2">
+		            <div id="container-2">
+		                <iframe id="iframe-2" src=""></iframe>
+		            </div>
+		        </td>
+		    </tr>
+		</table>
+	</body>
+</html>
