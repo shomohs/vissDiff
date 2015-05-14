@@ -8,27 +8,32 @@
 	</head>
 	<body>
 		<table id="vissDiffTable">
+			<tr>
+				<td colspan=2>
+					<br/>
+					<input id="diff" class="btn diff" type="submit" value="DIFF!"/>
+					<br/><br/>
+				</td>
+			</tr>
 		    <tr class="url-input">
-		        <th id="url-entry-1">
-		            <input id="url-1" type="url" placeholder="URL#1"></input>
-		            <input id="submit-1" class="btn submit" type="submit" value="Submit & Preview"></input>
-		        </th>
-		        <th id="url-entry-2">
-		            <input id="url-2" type="url" placeholder="URL#2"></input>
-		            <input id="submit-2" class="btn submit" type="submit" value="Submit & Preview"></input>
-		        </th>
-		    </tr>
-		    <tr class="webpage-display">
-		        <td id="webpage-1">
-		            <div id="container-1">
-		                <iframe id="iframe-1" src=""></iframe>
+		        <th id="url-entry-1" rowspan=2>
+	        		<hr><br/>
+		            <input id="url-1" class="url input" type="url" placeholder="URL#1"/>
+		            <input id="submit-1" class="btn url submit" type="submit" value="Submit & Preview"/>
+		            <br/><br/><hr><br/>
+		            <div id="container-1" class="container">
+		                <iframe id="iframe-1" src="" frameborder="0"></iframe>
 		            </div>
-		        </td>
-		        <td id="webpage-2">
-		            <div id="container-2">
-		                <iframe id="iframe-2" src=""></iframe>
+		        </th>
+		        <th id="url-entry-2" rowspan=2>
+		        	<hr><br/>
+		            <input id="url-2" class="url input" type="url" placeholder="URL#2"/>
+		            <input id="submit-2" class="btn url submit" type="submit" value="Submit & Preview"/>
+		            <br/><br/><hr><br/>
+		            <div id="container-2" class="container">
+		                <iframe id="iframe-2" src="" frameborder="0"></iframe>
 		            </div>
-		        </td>
+		        </th>
 		    </tr>
 		</table>
 	</body>
